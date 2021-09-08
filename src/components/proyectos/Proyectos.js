@@ -2,8 +2,8 @@ import React from 'react';
 
 export const Proyectos = () => {
     return (
-        <h2>
+        <h1>
             Proyectos
-        </h2>
+        </h1>
     )
 }
