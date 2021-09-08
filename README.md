@@ -10,7 +10,7 @@ Incluye:
 ### Librerías utilizadas:
 - [**React Router**](https://reactrouter.com/).
 
-### Versión: 1.0.0
+### Versión: 1.1.0
 
 ### Notas:
 Comando para ejecutar la aplicación:
