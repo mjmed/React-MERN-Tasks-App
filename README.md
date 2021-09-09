@@ -6,6 +6,7 @@ Aplicación MERN que permite crear y administrar proyectos y sus tareas. Incluye
 
 Incluye:
 + **React Router**
++ **Context API**
 
 ### Librerías utilizadas:
 - [**React Router**](https://reactrouter.com/).
