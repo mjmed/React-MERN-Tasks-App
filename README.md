@@ -6,12 +6,14 @@ Aplicación MERN que permite crear y administrar proyectos y sus tareas. Incluye
 
 Incluye:
 + **React Router**
++ **Context API**
 
 ### Librerías utilizadas:
 - [**React Router**](https://reactrouter.com/).
 - [**uuid**](https://www.npmjs.com/package/uuid).
+- [**react-transition-group**](https://www.npmjs.com/package/react-transition-group).
 
-### Versión: 1.3.0
+### Versión: 1.4.0
 
 ### Notas:
 Comando para ejecutar la aplicación:
