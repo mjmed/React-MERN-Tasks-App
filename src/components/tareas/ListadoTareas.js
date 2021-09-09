@@ -1,8 +1,16 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
+import proyectoContext from '../../context/proyectos/proyectoContext';
 import { Tarea } from './Tarea';
 
 
 export const ListadoTareas = () => {
+
+    const { proyecto, eliminarProyecto } = useContext( proyectoContext );
+
+    if ( !proyecto ) return <h2>Selecciona un proyecto</h2>;
+
+    // array destructuring
+    const [ proyectoActual ] = proyecto;
 
     const tareasProyecto = [
         { id: 1, nombre:'Elegir Plataforma', estado: true },
@@ -11,9 +19,14 @@ export const ListadoTareas = () => {
         { id: 4, nombre:'Elegir Hosting', estado: true },
     ];
 
+    const handleEliminar = () => {
+
+        eliminarProyecto( proyectoActual.id );
+    }
+
     return (
         <Fragment>
-            <h2>Proyecto: Tienda Virtual</h2>
+            <h2>Proyecto: { proyectoActual.nombre }</h2>
 
             <ul className="listado-tareas">
                 {
@@ -30,6 +43,7 @@ export const ListadoTareas = () => {
             <button
                 type="button"
                 className="btn btn-eliminar"
+                onClick={ handleEliminar }
             >
                 Eliminar proyecto &times;
             </button>

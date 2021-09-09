@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import proyectoContext from '../../context/proyectos/proyectoContext';
 
 
 export const FormTarea = () => {
+
+    const { proyecto } = useContext( proyectoContext );
+
+    // validación proyecto seleccionado
+    if ( !proyecto ) return null;
+
+    // const [ proyectoActual ] = proyecto;
+
     return (
         <div className="formulario">
             <form>
