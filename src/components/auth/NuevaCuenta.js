@@ -1,11 +1,13 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import alertaContext from '../../context/alertas/alertaContext';
+import authContext from '../../context/autenticacion/authContext';
 
 
-export const NuevaCuenta = () => {
+export const NuevaCuenta = ( props ) => {
 
     const { alerta, mostrarAlerta } = useContext(alertaContext);
+    const { autenticado, mensaje, registrarUsuario } = useContext(authContext);
 
     const [ usuario, guardarUsuario ] = useState({
         nombre: '',
@@ -23,6 +25,20 @@ export const NuevaCuenta = () => {
             [target.name]: target.value
         });
     }
+
+    // en caso de que el usuario se haya autenticado o registrado o sea
+    // un registro duplicado
+    useEffect(() => {
+
+        if ( autenticado ) {
+            props.history.push('/proyectos');
+        }
+
+        if ( mensaje ) {
+            mostrarAlerta( mensaje.msg, mensaje.categoria );
+        }
+        
+    }, [ autenticado, mensaje, props.history ]);
 
     const handleSubmit = ( e ) => {
 
@@ -51,6 +67,11 @@ export const NuevaCuenta = () => {
         }
 
         // pasarlo al action
+        registrarUsuario({
+            nombre,
+            email,
+            password
+        });
     }
 
     return (

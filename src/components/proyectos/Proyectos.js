@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+
+import authContext from '../../context/autenticacion/authContext';
 
 import { Barra } from '../layout/Barra';
 import { Sidebar } from '../layout/Sidebar';
@@ -7,6 +9,14 @@ import { ListadoTareas } from '../tareas/ListadoTareas';
 
 
 export const Proyectos = () => {
+
+    const { usuarioAutenticado } = useContext(authContext);
+
+    useEffect(() => {
+        usuarioAutenticado();
+        // eslint-disable-next-line
+    },[]);
+
     return (
         <div className="contenedor-app">
             <Sidebar />

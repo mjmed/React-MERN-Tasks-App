@@ -13,7 +13,7 @@ Incluye:
 - [**uuid**](https://www.npmjs.com/package/uuid).
 - [**react-transition-group**](https://www.npmjs.com/package/react-transition-group).
 
-### Versión: 1.5.0
+### Versión: 1.6.0
 
 ### Notas:
 Comando para ejecutar la aplicación:
