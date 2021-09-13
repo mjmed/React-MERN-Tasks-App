@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import alertaContext from '../../context/alertas/alertaContext';
 import authContext from '../../context/autenticacion/authContext';
 
@@ -38,6 +39,7 @@ export const NuevaCuenta = ( props ) => {
             mostrarAlerta( mensaje.msg, mensaje.categoria );
         }
         
+        // eslint-disable-next-line
     }, [ autenticado, mensaje, props.history ]);
 
     const handleSubmit = ( e ) => {

@@ -31,7 +31,6 @@ const AuthState = ( props ) => {
         try {
 
             const respuesta = await clienteAxios.post('/api/usuarios', datos);
-            console.log(respuesta.data);
 
             dispatch({
                 type: REGISTRO_EXITOSO,
@@ -43,7 +42,6 @@ const AuthState = ( props ) => {
 
         } catch (error) {
 
-            console.log(error.response.data.msg);
             const alerta = {
                 msg: error.response.data.msg,
                 categoria: 'alerta-error'
@@ -62,14 +60,13 @@ const AuthState = ( props ) => {
         const token = localStorage.getItem('token');
 
         if ( token ) {
-            // TODO: función para enviar el token por headers
+            // función para enviar el token por headers
             tokenAuth(token);
         }
 
         try {
 
             const respuesta = await clienteAxios.get('/api/auth');
-            console.log(respuesta);
 
             dispatch({
                 type: OBTENER_USUARIO,
