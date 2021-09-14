@@ -10,10 +10,9 @@ Incluye:
 
 ### Librerías utilizadas:
 - [**React Router**](https://reactrouter.com/).
-- [**uuid**](https://www.npmjs.com/package/uuid).
 - [**react-transition-group**](https://www.npmjs.com/package/react-transition-group).
 
-### Versión: 1.7.0
+### Versión: 1.8.0
 
 ### Notas:
 Comando para ejecutar la aplicación:

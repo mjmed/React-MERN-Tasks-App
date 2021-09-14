@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 
 import proyectoContext from '../../context/proyectos/proyectoContext';
 import tareaContext from '../../context/tareas/tareaContext';
@@ -65,9 +64,7 @@ export const FormTarea = () => {
         if ( tareaSeleccionada === null ) {
 
             // agregar la nueva tarea al state
-            tarea.id = uuidv4();
-            tarea.proyectoId = proyectoActual.id;
-            tarea.estado = false;
+            tarea.proyecto = proyectoActual._id;
             agregarTarea( tarea );
 
         } else {
