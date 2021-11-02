@@ -9,8 +9,8 @@ Incluye:
 + **Context API**
 
 ### Librerías utilizadas:
-- [**React Router**](https://reactrouter.com/).
-- [**react-transition-group**](https://www.npmjs.com/package/react-transition-group).
+- [**React Router**](https://reactrouter.com/)
+- [**react-transition-group**](https://www.npmjs.com/package/react-transition-group)
 
 ### Versión: 1.8.0
 
